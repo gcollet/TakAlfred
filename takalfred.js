@@ -26,17 +26,18 @@ for (const file of commandFiles) {
 
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isChatInputCommand()) return;
+	if (interaction.customId === 'emprunt') {
+		console.log(interaction);
+		await interaction.deferUpdate();
+		await interaction.editReply({ content: 'Merci de penser à ramener votre instrument',ephemeral: true, components: [] });
+	}
 	
 	const command = interaction.client.commands.get(interaction.commandName);
 
 	if (!command) return;
 	try {
 		await command.execute(interaction);
-		if (interaction.customId === 'emprunt') {
-			console.log(interaction);
-			await interaction.deferUpdate();
-			await interaction.editReply({ content: 'Merci de penser à ramener votre instrument',ephemeral: true, components: [] });
-		}
+		
 	} catch (error) {
 		console.error(error);
 		await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
