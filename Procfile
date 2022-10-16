@@ -1,1 +1,1 @@
-worker: node deploy-commmands.js
+worker: node takalfred.js deploy-commmands.js
