@@ -1,0 +1,45 @@
+{
+    "Disponibles": {
+        "Agogo" : {
+            "label": "Agogo",
+            "description": "My ding ding dong",
+			"value": "Agogo",
+            "valeurs" : ["1","2","3","4"]
+        },
+        "Caixa" : {
+            "label": "Caïxa",
+            "description": "1..41..41..41..41.. Phrase 2",
+            "value": "Caixa",
+            "valeurs": ["1","2","3","4","5"]
+        },
+        "Chocalo" : {
+            "label": "Chocalho",
+            "description": "tchikitchikitchikitchik",
+            "value": "Chocalho",
+            "valeurs": ["1","2","3","4","5","6"]
+        },
+        "Repinique" : {
+            "label": "Répinique",
+            "description" : "Takalikatakalikata",
+			"value" : "repinique",
+            "valeurs" : ["1","2","3"]
+        },
+        "Surdo" : {
+            "label": "Surdo",
+            "description": "Pim, Pam et Poum sont sur un bateau",
+            "value": "Surdo",
+            "valeurs": ["Contra 1", "Contra 2", "Marque 1", "Marque 2", "Coupe 1", "Coupe 2", "Baby Rouge", "Baby Vert", "Baby Jaune"]
+        },
+        "Tamborim" : {
+            "label": "Tamborim",
+            "description": "Le pouvoir de la mèche",
+            "value": "Tamborim",
+            "valeurs":  ["1","2","3","4","6","7","8"]
+        }
+    },
+    "Emprunts" : {
+        "Tamborim" : {
+            "5" : "Bilou"
+        }
+    }
+}

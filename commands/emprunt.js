@@ -1,4 +1,10 @@
+const path = require('node:path');
 const { SlashCommandBuilder, ActionRowBuilder, SelectMenuBuilder } = require('discord.js');
+instru = require(path.join(__dirname, '../db', 'instruments.json'))
+const avail_instru = []
+for(let i in instru.Disponibles) { 
+    avail_instru.push({label:instru.Disponibles[i].label, description:instru.Disponibles[i].description, value:instru.Disponibles[i].value}); 
+};
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -10,38 +16,7 @@ module.exports = {
 				new SelectMenuBuilder()
 					.setCustomId('select_instrument')
 					.setPlaceholder('Instrument')
-					.addOptions(
-						{
-							label: 'Agogo',
-							description: 'My ding ding dong',
-							value: 'agogo',
-						},
-						{
-							label: 'Répinique',
-							description: 'Takalikatakalikata',
-							value: 'repinique',
-						},
-                        {
-							label: 'Chocalho',
-							description: 'tchikitchikitchikitchik',
-							value: 'chocalho',
-						},
-                        {
-							label: 'Caïxa',
-							description: '1..41..41..41..41.. Phrase 2',
-							value: 'caixa',
-						},
-                        {
-							label: 'Tamborim',
-							description: 'Le pouvoir de la mèche',
-							value: 'tamborim',
-						},
-                        {
-							label: 'Surdo',
-							description: 'Pim, Pam et Poum sont sur un bateau',
-							value: 'surdo',
-						},
-					),
+					.addOptions(avail_instru),
 			);
 		await interaction.reply({ content: 'Choisi un instrument à emprunter', ephemeral: true, components: [row] });
 	},
