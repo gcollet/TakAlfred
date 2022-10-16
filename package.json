@@ -4,6 +4,7 @@
   "description": "a discord bot to manage stuff",
   "main": "takalfred.js",
   "scripts": {
+    "start": "node takalfred.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
