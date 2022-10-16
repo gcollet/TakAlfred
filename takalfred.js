@@ -1,6 +1,6 @@
 // Require the necessary discord.js classes
 const { Client, GatewayIntentBits } = require('discord.js');
-const { token } = require('./config.json');
+const token = proccess.env.TOKY
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -25,4 +25,4 @@ client.on('interactionCreate', async interaction => {
 });
 
 // Login to Discord with your client's token
-client.login(proccess.env.TOKY);
+client.login(token);

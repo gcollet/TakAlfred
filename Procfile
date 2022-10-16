@@ -1,1 +1,1 @@
-worker: node ./takalfred.js
+worker: node takalfred.js
