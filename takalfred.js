@@ -34,7 +34,8 @@ client.on('interactionCreate', async interaction => {
 		await command.execute(interaction);
 		if (interaction.customId === 'emprunt') {
 			console.log(interaction);
-			await interaction.update({ content: 'Merci de penser à ramener votre instrument',ephemeral: true, components: [] });
+			await interaction.deferUpdate();
+			await interaction.editReply({ content: 'Merci de penser à ramener votre instrument',ephemeral: true, components: [] });
 		}
 	} catch (error) {
 		console.error(error);
