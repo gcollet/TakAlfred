@@ -43,6 +43,6 @@ module.exports = {
 						},
 					),
 			);
-		await interaction.reply({ content: 'Choisi un instrument à emprunter', components: [row] });
+		await interaction.reply({ content: 'Choisi un instrument à emprunter', ephemeral: true, components: [row] });
 	},
 };

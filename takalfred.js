@@ -26,14 +26,15 @@ for (const file of commandFiles) {
 
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isChatInputCommand()) return;
-
+	
 	const command = interaction.client.commands.get(interaction.commandName);
 
 	if (!command) return;
 	try {
 		await command.execute(interaction);
 		if (interaction.customId === 'emprunt') {
-			await interaction.update({ content: 'Merci d\'avoir choisi un instrument', components: [] });
+			console.log(interaction);
+			await interaction.update({ content: 'Merci de penser à ramener votre instrument',ephemeral: true, components: [] });
 		}
 	} catch (error) {
 		console.error(error);
