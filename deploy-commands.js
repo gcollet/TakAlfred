@@ -1,7 +1,10 @@
 const { REST, SlashCommandBuilder, Routes } = require('discord.js');
-const clientId = proccess.env.CLIENT_ID
-const guildId = proccess.env.GUILD_ID
-const token = proccess.env.TOKY
+proccess.env.CLIENT_ID
+const clientId = CLIENT_ID
+proccess.env.GUILD_ID
+const guildId = GUILD_ID
+proccess.env.TOKY
+const token = TOKY
 
 const commands = [
 	new SlashCommandBuilder().setName('ping').setDescription('Replies with pong!'),
