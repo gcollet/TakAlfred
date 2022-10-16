@@ -8,7 +8,7 @@ module.exports = {
 		const row = new ActionRowBuilder()
 			.addComponents(
 				new SelectMenuBuilder()
-					.setCustomId('select')
+					.setCustomId('select_instrument')
 					.setPlaceholder('Instrument')
 					.addOptions(
 						{
