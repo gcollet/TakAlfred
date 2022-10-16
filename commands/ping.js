@@ -24,6 +24,6 @@ module.exports = {
 					),
 			);
 
-		await interaction.reply({ content: 'Pong!' });
+		await interaction.reply({ content: 'Pong!', components: [row] });
 	},
 };
