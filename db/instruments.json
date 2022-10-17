@@ -2,44 +2,35 @@
     "Disponibles": {
         "Agogo" : {
             "label": "Agogo",
-            "description": "My ding ding dong",
 			"value": "Agogo",
-            "valeurs" : ["1","2","3","4"]
+            "valeurs" : ["TAKAGO-002","TAKAGO-004","TAKAGO-005","TAKAGO-006","TAKAGO-007","TAKAGO-008","TAKAGO-009"]
         },
         "Caixa" : {
             "label": "Caïxa",
-            "description": "1..41..41..41..41.. Phrase 2",
             "value": "Caixa",
-            "valeurs": ["1","2","3","4","5"]
+            "valeurs": ["CXA-03","CXA-04","CXA-05","CXA-10","CXA-11","CXA-12","TAKA-08","TRL-01","TRL-02"]
         },
-        "Chocalo" : {
-            "label": "Chocalho",
-            "description": "tchikitchikitchikitchik",
-            "value": "Chocalho",
-            "valeurs": ["1","2","3","4","5","6"]
+        "Shaker" : {
+            "label": "Shaker",
+            "value": "Shaker",
+            "valeurs": ["CHO-02","CHO-03","CHO-05", "CHO-08","CHO-09","CHO-10","CHO-11","CHO-13","CHO-14","GZ-01","GZ-02","GZ-03","GZ-04","GZ-05"]
         },
         "Repinique" : {
             "label": "Répinique",
-            "description" : "Takalikatakalikata",
-			"value" : "repinique",
-            "valeurs" : ["1","2","3"]
+			"value" : "Repinique",
+            "valeurs" : ["REP-01","REP-02","REP-03","REP-04","REP-05","REP-06","REP-07"]
         },
         "Surdo" : {
             "label": "Surdo",
-            "description": "Pim, Pam et Poum sont sur un bateau",
             "value": "Surdo",
-            "valeurs": ["Contra 1", "Contra 2", "Marque 1", "Marque 2", "Coupe 1", "Coupe 2", "Baby Rouge", "Baby Vert", "Baby Jaune"]
+            "valeurs": ["BB-01", "BB-02", "BB-03", "SC-01", "SC-02", "SS-01", "SS-02", "SM-01", "SM-02"]
         },
         "Tamborim" : {
             "label": "Tamborim",
-            "description": "Le pouvoir de la mèche",
             "value": "Tamborim",
-            "valeurs":  ["1","2","3","4","6","7","8"]
+            "valeurs":  ["TMB-01","TMB-03","TMB-06","TMB-07","TMB-08","TMB-09","TMB-10","TMB-11","TMB-12","TMB-13"]
         }
     },
     "Emprunts" : {
-        "Tamborim" : {
-            "5" : "Bilou"
-        }
     }
 }

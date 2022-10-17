@@ -1,6 +1,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const { Client, Collection, GatewayIntentBits } = require('discord.js');
+const { Client, Collection, GatewayIntentBits, ActionRowBuilder, SelectMenuBuilder } = require('discord.js');
 token = process.env.TOKY
 
 // Create a new client instance
@@ -10,6 +10,9 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 client.once('ready', () => {
 	console.log('Ready!');
 });
+
+// set the instruments from db file
+instru = require(path.join(__dirname, 'db', 'instruments.json'))
 
 // set the commands
 client.commands = new Collection();
@@ -26,24 +29,29 @@ for (const file of commandFiles) {
 
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isChatInputCommand()) return;
-	if (interaction.customId === 'emprunt') {
-		console.log(interaction);
-		await interaction.deferUpdate();
-		await interaction.editReply({ content: 'Merci de penser à ramener votre instrument',ephemeral: true, components: [] });
-	}
-	
 	const command = interaction.client.commands.get(interaction.commandName);
-
 	if (!command) return;
 	try {
 		await command.execute(interaction);
-		
 	} catch (error) {
 		console.error(error);
 		await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
 	}
 });
 
+client.on('interactionCreate', async interaction => {
+	if (!interaction.isSelectMenu()) return;
+	if (interaction.customId === 'select_instrument') {
+		const command = interaction.client.commands.get("emprunt");
+		row = command.list_of_inst(interaction.values[0])
+		await interaction.deferUpdate();
+		await interaction.editReply({ content: 'Quel '+interaction.values[0]+' ?', ephemeral: true, components: [row] });
+	}
+	if (interaction.customId === 'select_idgrave') {
+		await interaction.deferUpdate();
+		await interaction.editReply({ content: 'Ton emprunt est enregistré, n\'oublie pas de me prévenir quand tu le ramènera (/retour)', ephemeral: true, components: [] });
+	}
+});
 
 // Login to Discord with your client's token
 client.login(token);
