@@ -3,7 +3,7 @@
         "Agogo" : {
             "label": "Agogo",
 			"value": "Agogo",
-            "valeurs" : ["TAKAGO-002","TAKAGO-004","TAKAGO-005","TAKAGO-006","TAKAGO-007","TAKAGO-008","TAKAGO-009"]
+            "valeurs" : ["TAKAGO-004","TAKAGO-005","TAKAGO-006","TAKAGO-007","TAKAGO-008","TAKAGO-009"]
         },
         "Caixa" : {
             "label": "Caïxa",
@@ -32,5 +32,24 @@
         }
     },
     "Emprunts" : {
+        "Agogo" : [
+            {
+                "name": "Guillaume Collet",
+                "userid": "690267424385400862",
+                "date_emprunt": "",
+                "idgrave": "TAKAGO-002",
+                "date_rendu":""
+            }
+        ],
+        "Caixa" : {
+            },
+        "Shaker" : {
+            },
+        "Repinique" : {
+            },
+        "Surdo" : {
+            },
+        "Tamborim" : {
+            }
     }
 }

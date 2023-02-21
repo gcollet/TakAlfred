@@ -41,13 +41,13 @@ client.on('interactionCreate', async interaction => {
 
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isSelectMenu()) return;
-	if (interaction.customId === 'select_instrument') {
+	else if (interaction.customId === 'select_instrument') {
 		const command = interaction.client.commands.get("emprunt");
 		row = command.list_of_inst(interaction.values[0])
 		await interaction.deferUpdate();
 		await interaction.editReply({ content: 'Quel '+interaction.values[0]+' ?', ephemeral: true, components: [row] });
 	}
-	if (interaction.customId === 'select_idgrave') {
+	else if (interaction.customId === 'select_idgrave') {
 		await interaction.deferUpdate();
 		await interaction.editReply({ content: 'Ton emprunt est enregistré, n\'oublie pas de me prévenir quand tu le ramènera (/retour)', ephemeral: true, components: [] });
 	}
